@@ -1,14 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Container = styled.div`
   padding: 0 0.5rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #f4f4f4;
   min-height: 100vh;
-`
+`;
 const Main = styled.main`
   padding: 5rem 0;
   flex: 1;
@@ -16,39 +12,72 @@ const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Title = styled.h1`
   margin: 0;
   line-height: 1.15;
+  color: black;
   font-size: 4rem;
   text-align: center;
   text-decoration: none;
+`;
 
-  a {
-    color: ${({ theme }) => theme.colors.secondary};
-    text-decoration: none;
-    &:hover,
-    :focus,
-    :active {
-      text-decoration: underline;
+const ListContainer = styled.div`
+  margin-top: 2rem;
+  display: grid;
+  place-items: center;
+  background-color: #fcf0ac;
+  width: 50vw;
+  min-width: 400px;
+  margin-inline: auto;
+  border-radius: 20px;
+`;
+
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+
+  li {
+    padding: 1rem 0.5rem;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    margin-inline: auto;
+
+    :hover {
+      background-color: white;
     }
   }
-`
+`;
 
-const Description = styled.p`
+const Heading2 = styled.h2`
   text-align: center;
-  line-height: 1.5;
-  font-size: 1.5rem;
-`
-const CodeTag = styled.code`
-  background: #fafafa;
-  border-radius: 5px;
-  margin: 0 0.75rem;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-`
+`;
 
-export { Container, Main, Title, Description, CodeTag }
+const Data = styled.div`
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const SignupDate = styled.span`
+  font-weight: 500;
+  font-size: 0.7rem;
+`;
+
+export {
+  Container,
+  Main,
+  Title,
+  List,
+  Heading2,
+  Data,
+  SignupDate,
+  ListContainer
+};
