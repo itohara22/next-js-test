@@ -29,7 +29,8 @@ const ListContainer = styled.div`
   place-items: center;
   background-color: #fcf0ac;
   width: 50vw;
-  min-width: 400px;
+  min-width: 350px;
+  max-width: 500px;
   margin-inline: auto;
   border-radius: 20px;
 `;
@@ -39,7 +40,8 @@ const List = styled.ul`
   padding: 0;
   font-size: 1.2rem;
 
-  li {
+  a {
+    border-radius: 10px;
     padding: 1rem 0.5rem;
     display: grid;
     grid-auto-flow: column;
@@ -60,7 +62,7 @@ const Heading2 = styled.h2`
 
 const Data = styled.div`
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
   display: flex;
   justify-content: space-evenly;

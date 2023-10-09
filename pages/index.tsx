@@ -87,12 +87,12 @@ export default function Home() {
             <List>
               {signupData.map((data) => {
                 return (
-                  <a href={`/users/${data.id}`}>
-                    <li key={data.id}>
+                  <li key={data.id}>
+                    <a href={`/users/${data.id}`}>
                       <span>{data.name}</span>
                       <SignupDate>Sign Up date: {data.signupDate}</SignupDate>
-                    </li>
-                  </a>
+                    </a>
+                  </li>
                 );
               })}
             </List>
